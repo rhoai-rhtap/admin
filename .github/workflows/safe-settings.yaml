@@ -70,5 +70,5 @@ jobs:
           PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
           ENABLE_PR_COMMENT: true
           LOG_LEVEL: trace
-          SETTINGS_FILE_PATH: organization.yaml
+          SETTINGS_FILE_PATH: organization.yml
     
