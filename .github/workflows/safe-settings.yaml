@@ -68,6 +68,7 @@ jobs:
           GITHUB_CLIENT_ID: ${{ vars.SAFE_SETTINGS_GITHUB_CLIENT_ID }}
           GITHUB_CLIENT_SECRET: ${{ secrets.SAFE_SETTINGS_GITHUB_CLIENT_SECRET }}
           PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
+          DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/admin/.github/config.yaml
           ENABLE_PR_COMMENT: true
           LOG_LEVEL: trace
           SETTINGS_FILE_PATH: organization.yml

@@ -1,0 +1,5 @@
+# https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/sample-deployment-settings.yml
+---
+restrictedRepos:
+  include:
+    - ^rhods-operator$
