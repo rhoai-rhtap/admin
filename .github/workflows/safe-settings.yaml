@@ -69,7 +69,7 @@ jobs:
           GITHUB_CLIENT_SECRET: ${{ secrets.SAFE_SETTINGS_GITHUB_CLIENT_SECRET }}
           PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
           CONFIG_PATH: safe-settings
-          DEPLOYMENT_CONFIG_FILE: config.yml
+          DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/safe-settings/config.yml
           SETTINGS_FILE_PATH: organization.yml
           ENABLE_PR_COMMENT: true
           LOG_LEVEL: trace
