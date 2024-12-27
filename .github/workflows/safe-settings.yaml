@@ -24,7 +24,7 @@ jobs:
       SAFE_SETTINGS_VERSION: 2.1.14
 
       # Path on GHA runner box where safe-settings code is downloaded to
-      SAFE_SETTINGS_CODE_DIR: ${{ github.workspace }}/.safe-settings-code
+      SAFE_SETTINGS_CODE_DIR: .safe-settings-code
 
     steps:
       # Self-checkout of 'admin' repo for access to safe-settings config:
@@ -40,7 +40,10 @@ jobs:
 
       # For Debug
       - name: List Files and Directories
-        run: ls -lrt
+        run: |
+          pwd
+          echo "${{ github.workspace }}"
+          ls -lart
 
       # Setup Node.js environment
       - name: Setup Node.js
