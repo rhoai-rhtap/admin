@@ -2,8 +2,6 @@
 # https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/settings.yml
 
 ---
-# This is the settings that need to be applied to all repositories in the org
-# See https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-an-organization-repository for all available settings for a repository
 repository:
   delete_branch_on_merge: true
 

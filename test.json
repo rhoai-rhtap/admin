@@ -1,0 +1,327 @@
+[
+    {
+        "repository_id": 773629159,
+        "repository_name": "kserve",
+        "repository_full_name": "rhoai-rhtap/kserve",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 891308019,
+        "repository_name": "argo-workflows-explore",
+        "repository_full_name": "rhoai-rhtap/argo-workflows-explore",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 764496244,
+        "repository_name": "ml-metadata",
+        "repository_full_name": "rhoai-rhtap/ml-metadata",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 908907400,
+        "repository_name": "admin",
+        "repository_full_name": "rhoai-rhtap/admin",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 830474342,
+        "repository_name": "training-operator",
+        "repository_full_name": "rhoai-rhtap/training-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 756176712,
+        "repository_name": "openvino_model_server",
+        "repository_full_name": "rhoai-rhtap/openvino_model_server",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 894983616,
+        "repository_name": "modelmesh-runtime-adapter-explore",
+        "repository_full_name": "rhoai-rhtap/modelmesh-runtime-adapter-explore",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 855713594,
+        "repository_name": "RHOAI-Build-Config",
+        "repository_full_name": "rhoai-rhtap/RHOAI-Build-Config",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 829425993,
+        "repository_name": "rhods-operator",
+        "repository_full_name": "rhoai-rhtap/rhods-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "true"
+            }
+        ]
+    },
+    {
+        "repository_id": 801917665,
+        "repository_name": "odh-dashboard",
+        "repository_full_name": "rhoai-rhtap/odh-dashboard",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 830335470,
+        "repository_name": "kueue",
+        "repository_full_name": "rhoai-rhtap/kueue",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 745088774,
+        "repository_name": "modelmesh-runtime-adapter",
+        "repository_full_name": "rhoai-rhtap/modelmesh-runtime-adapter",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 745085124,
+        "repository_name": "modelmesh",
+        "repository_full_name": "rhoai-rhtap/modelmesh",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 744970354,
+        "repository_name": "trustyai-service-operator",
+        "repository_full_name": "rhoai-rhtap/trustyai-service-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 744968326,
+        "repository_name": "trustyai-explainability",
+        "repository_full_name": "rhoai-rhtap/trustyai-explainability",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 894952696,
+        "repository_name": "modelmesh-serving-explore",
+        "repository_full_name": "rhoai-rhtap/modelmesh-serving-explore",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 745091491,
+        "repository_name": "odh-model-controller",
+        "repository_full_name": "rhoai-rhtap/odh-model-controller",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 745090010,
+        "repository_name": "rest-proxy",
+        "repository_full_name": "rhoai-rhtap/rest-proxy",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 744874246,
+        "repository_name": "codeflare-operator",
+        "repository_full_name": "rhoai-rhtap/codeflare-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 897268065,
+        "repository_name": "kueue-rm",
+        "repository_full_name": "rhoai-rhtap/kueue-rm",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 897264060,
+        "repository_name": "kuberay-rm",
+        "repository_full_name": "rhoai-rhtap/kuberay-rm",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 895407160,
+        "repository_name": "data-science-pipelines-operator-rm",
+        "repository_full_name": "rhoai-rhtap/data-science-pipelines-operator-rm",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 829875816,
+        "repository_name": "argo-workflows",
+        "repository_full_name": "rhoai-rhtap/argo-workflows",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 801917530,
+        "repository_name": "data-science-pipelines-operator",
+        "repository_full_name": "rhoai-rhtap/data-science-pipelines-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 745320064,
+        "repository_name": "kubeflow",
+        "repository_full_name": "rhoai-rhtap/kubeflow",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 744982626,
+        "repository_name": "kuberay",
+        "repository_full_name": "rhoai-rhtap/kuberay",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 808044678,
+        "repository_name": "must-gather",
+        "repository_full_name": "rhoai-rhtap/must-gather",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 862265722,
+        "repository_name": "model-registry-operator",
+        "repository_full_name": "rhoai-rhtap/model-registry-operator",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 897167120,
+        "repository_name": "odh-dashboard-rm",
+        "repository_full_name": "rhoai-rhtap/odh-dashboard-rm",
+        "properties": [
+            {
+                "property_name": "IS_KONFLUX_ENABLED",
+                "value": "false"
+            }
+        ]
+    },
+    {
+        "repository_id": 897711247,
+        "repository_name": "modelmesh-serving-rm",
+        "repository_full_name": "rhoai-rhtap/modelmesh-serving-rm",
+        "properties" : []
+    }
+]
