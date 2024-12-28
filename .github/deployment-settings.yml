@@ -1,0 +1,11 @@
+# https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/sample-deployment-settings.yml
+
+---
+## IMPORTANT NOTE
+# By default, the include and exclude attributes utilize regular expressions for matching.
+# For example, the pattern 'data-science-pipelines' will match following repositories 'data-science-pipelines', 'data-science-pipelines-operator', 'data-science-pipelines-tekton'.
+# To match only the repository named data-science-pipelines, use the regular expression '^data-science-pipelines$'.
+restrictedRepos:
+  include:
+    - '^rhods-operator$'
+    - '^rhods-operator-rm$'
