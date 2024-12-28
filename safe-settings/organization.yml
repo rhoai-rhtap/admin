@@ -9,4 +9,4 @@ repository:
 
 custom_properties:
   - name: IS_KONFLUX_ENABLED
-    value: true
+    value: "true"
