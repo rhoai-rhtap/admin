@@ -2,4 +2,4 @@
 ---
 restrictedRepos:
   include:
-    - 'rhods-operator'
+    - '^rhods-operator$'

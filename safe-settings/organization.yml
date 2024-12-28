@@ -8,5 +8,5 @@ repository:
   delete_branch_on_merge: true
 
 custom_properties:
-  - name: IS_KONFLUX_ENABLED
+  - name: KONFLUX_ENABLED
     value: "true"
