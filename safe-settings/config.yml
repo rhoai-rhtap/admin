@@ -1,7 +1,5 @@
 # https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/sample-deployment-settings.yml
 ---
-restrictedRepos:  
-  exclude:
-    - 'admin'
-  # include:
-  #   - '^rhods-operator$'
+restrictedRepos:
+  include:
+    - 'rhods-operator'

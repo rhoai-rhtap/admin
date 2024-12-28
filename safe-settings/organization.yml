@@ -6,3 +6,7 @@
 # See https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-an-organization-repository for all available settings for a repository
 repository:
   delete_branch_on_merge: true
+
+custom_properties:
+  - name: IS_KONFLUX_ENABLED
+    value: true
