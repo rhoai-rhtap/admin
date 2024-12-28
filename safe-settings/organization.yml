@@ -7,5 +7,5 @@ repository:
   allow_auto_merge: false
 
 custom_properties:
-  - name: KONFLUX_ENABLED
+  - name: konflux_enabled
     value: "true"
