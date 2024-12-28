@@ -1,7 +1,6 @@
 # https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/suborg.yml
 ---
-suborgrepos:
-  - '^rhods-operator$'
+repository:
 
 branches:
   # If the name of the branch value is specified as `default`, then the app will create a branch protection rule to apply against the default branch in the repo
@@ -10,7 +9,7 @@ branches:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 2
+        required_approving_review_count: 4
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
@@ -33,5 +32,5 @@ branches:
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
       restrictions:
         apps: ['safe-settings-app-01','konflux-staging','red-hat-konflux','konflux-internal-p02']
-        users: ['dchourasia','riprasad','MohammadiIram']
+        users: ['dchourasia','riprasad']
         teams: []
