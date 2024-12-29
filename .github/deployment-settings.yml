@@ -8,4 +8,4 @@
 restrictedRepos:
   include:
     - '^rhods-operator$'
-    - '^rhods-operator-rm$'
+    # - '^rhods-operator-rm$'
