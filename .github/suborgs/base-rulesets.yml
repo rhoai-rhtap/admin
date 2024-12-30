@@ -12,9 +12,9 @@ rulesets:
         actor_type: OrganizationAdmin
         bypass_mode: always
 
-      - actor_id: 826640
-        actor_type: Integration
-        bypass_mode: pull_request
+      # - actor_id: 826640
+      #   actor_type: Integration
+      #   bypass_mode: pull_request
 
       - actor_id: 11825178
         actor_type: Team
