@@ -1,21 +1,13 @@
 # https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/suborg.yml
 ---
 suborgrepos:
-  - rhods-operator-rm
+  - rhods-operator
 
 rulesets:
   - name: Base Rulesets
     target: branch
     enforcement: active
     bypass_actors:
-      - actor_id: 1
-        actor_type: OrganizationAdmin
-        bypass_mode: always
-
-      - actor_id: 1097369
-        actor_type: Integration
-        bypass_mode: pull_request
-
       - actor_id: 11825178
         actor_type: Team
         bypass_mode: pull_request
@@ -27,14 +19,14 @@ rulesets:
         exclude: []
 
     rules:
-      - type: deletion
+      - type: creation
 
       - type: non_fast_forward
 
       - type: pull_request
         parameters:
-          required_approving_review_count: 0
-          dismiss_stale_reviews_on_push: false
+          required_approving_review_count: 1
+          dismiss_stale_reviews_on_push: true
           require_code_owner_review: false
           require_last_push_approval: false
           required_review_thread_resolution: false
