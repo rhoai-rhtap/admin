@@ -9,3 +9,6 @@ repository:
 custom_properties:
   - name: konflux_enabled
     value: "true"
+
+  - name: safe_settings
+    value: "true"
