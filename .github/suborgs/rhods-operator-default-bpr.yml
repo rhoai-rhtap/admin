@@ -1,5 +1,6 @@
 # https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/suborg.yml
 ---
+# Usea Glob pattern for matching
 suborgrepos:
   - rhods-operator
 
