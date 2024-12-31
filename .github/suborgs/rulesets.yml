@@ -1,0 +1,94 @@
+# https://github.com/github/safe-settings/blob/main-enterprise/docs/sample-settings/suborg.yml
+---
+# Uses Glob pattern for matching
+suborgrepos:
+  - '*'
+
+rulesets:
+  # Default Rulesets for release branches
+  - name: Default
+    target: branch
+    enforcement: active
+
+    conditions:
+      ref_name:
+        include:
+          - "refs/heads/rhoai-*"
+        exclude: []
+
+    rules:
+      - type: deletion
+
+      - type: non_fast_forward
+
+  # Code Freeze Rulesets 
+  - name: Code Freeze
+    target: branch
+    enforcement: active
+
+    conditions:
+      ref_name:
+        include:
+          - "refs/heads/rhoai-2.8"
+        exclude: []
+
+    rules:
+      - type: deletion
+
+      # Block force pushes
+      - type: non_fast_forward
+
+      # enforce that all changes to the target branch must be made via a pull request
+      # Anybody with push access to the repository can merge the pull request
+      - type: pull_request
+        parameters:
+          required_approving_review_count: 0
+          dismiss_stale_reviews_on_push: false
+          require_code_owner_review: false
+          require_last_push_approval: false
+          required_review_thread_resolution: false
+          allowed_merge_methods:
+            - merge
+            - squash
+            - rebaseactive
+
+      
+      # Enforces that only bypass_actors can merge PRs
+      #   bypass_actors with 'bypass_mode: pull_request' cannot push directly to the branch, but can merge PRs
+      #   only bypass_actors with 'bypass_mode: always' are permitted to push directly to the branch and merge PRs
+      - type: update
+        parameter:
+          update_allows_fetch_and_merge: false
+
+    bypass_actors:
+      - actor_id: 1
+        actor_type: OrganizationAdmin
+        bypass_mode: always
+
+      - actor_id: 1097369
+        actor_type: Integration
+        bypass_mode: pull_request
+
+      - actor_id: 11825178
+        actor_type: Team
+        bypass_mode: pull_request
+
+  # EOL Ruleset - Locks a branch and make the branch read-only
+  - name: Lock EOL Branch
+    target: branch
+    enforcement: active
+
+    conditions:
+      ref_name:
+        include:
+          - "refs/heads/rhoai-2.10"
+        exclude: []
+
+    rules:
+      - type: deletion
+
+      - type: non_fast_forward
+
+      - type: update
+        parameter:
+          update_allows_fetch_and_merge: false
