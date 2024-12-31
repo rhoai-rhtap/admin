@@ -1,73 +1,72 @@
 ---
-name: Safe Settings Sync
-on:
-  push:
-    branches:
-      - main
-#   schedule:
-#     - cron: '0 */4 * * *'  # Runs every 4 hours
-  workflow_dispatch: {}  # Allows manual triggering of the workflow
-
-concurrency:
-  cancel-in-progress: true
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-
-jobs:
-  safe-settings-sync:
-    runs-on: ubuntu-latest
-
-    env:
-      # Version/tag of github/safe-settings repo to use
-      SAFE_SETTINGS_VERSION: 2.1.14
-
-      # Path on GHA runner box where safe-settings code is downloaded to
-      SAFE_SETTINGS_CODE_DIR: .safe-settings-code
-
-    steps:
-      # Self-checkout of 'admin' repo for access to safe-settings config:
-      - uses: actions/checkout@v4
-
-        # Checkout the GitHub Safe-Settings repository for running full sync
-      - name: Checkout GitHub Safe-Settings repository
-        uses: actions/checkout@v2  # Use latest stable v2
-        with:
-          repository: github/safe-settings
-          ref: ${{ env.SAFE_SETTINGS_VERSION }}
-          path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
-
-      # For Debug
-      - name: List Files and Directories
-        run: |
-          pwd
-          echo "${{ github.workspace }}"
-          ls -lart
-
-      # Setup Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v2 # Use stable v2
-        with:
-          cache-dependency-path: ${{ env.SAFE_SETTINGS_CODE_DIR }}/package-lock.json
-          cache: npm
-          node-version-file: ${{ env.SAFE_SETTINGS_CODE_DIR }}/.nvmrc
-
-      # Install dependencies for safe-settings
-      - name: Install dependencies
-        run: npm install
-        working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
-
-      # Run the full-sync application for Safe Settings
-      - name: Run application
-        run: npm run full-sync
-        working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
-        env:
-          GH_ORG: ${{ env.GITHUB_REPOSITORY_OWNER }}
-          APP_ID: ${{ vars.SAFE_SETTINGS_APP_ID }}
-          GITHUB_CLIENT_ID: ${{ vars.SAFE_SETTINGS_GITHUB_CLIENT_ID }}
-          GITHUB_CLIENT_SECRET: ${{ secrets.SAFE_SETTINGS_GITHUB_CLIENT_SECRET }}
-          PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
-          LOG_LEVEL: trace
-          DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/.github/deployment-settings.yml
-        #   CONFIG_PATH: safe-settings
-        #   DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/safe-settings/config.yml
-        #   SETTINGS_FILE_PATH: organization.yml
+    name: Safe Settings Sync
+    on:
+      push:
+        branches:
+          - main
+    #   schedule:
+    #     - cron: '0 */4 * * *'  # Runs every 4 hours
+      workflow_dispatch: {}  # Allows manual triggering of the workflow
     
+    concurrency:
+      cancel-in-progress: true
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    
+    jobs:
+      safe-settings-sync:
+        runs-on: ubuntu-latest
+    
+        env:
+          # Version/tag of github/safe-settings repo to use
+          SAFE_SETTINGS_VERSION: 2.1.14
+    
+          # Path on GHA runner box where safe-settings code is downloaded to
+          SAFE_SETTINGS_CODE_DIR: .safe-settings-code
+    
+        steps:
+          # Self-checkout of 'admin' repo for access to safe-settings config:
+          - uses: actions/checkout@v4
+    
+            # Checkout the GitHub Safe-Settings repository for running full sync
+          - name: Checkout GitHub Safe-Settings repository
+            uses: actions/checkout@v2  # Use latest stable v2
+            with:
+              repository: github/safe-settings
+              ref: ${{ env.SAFE_SETTINGS_VERSION }}
+              path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+    
+          # For Debug
+          - name: List Files and Directories
+            run: |
+              pwd
+              echo "${{ github.workspace }}"
+              ls -lart
+    
+          # Setup Node.js environment
+          - name: Setup Node.js
+            uses: actions/setup-node@v2 # Use stable v2
+            with:
+              cache-dependency-path: ${{ env.SAFE_SETTINGS_CODE_DIR }}/package-lock.json
+              cache: npm
+              node-version-file: ${{ env.SAFE_SETTINGS_CODE_DIR }}/.nvmrc
+    
+          # Install dependencies for safe-settings
+          - name: Install dependencies
+            run: npm install
+            working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+    
+          # Run the full-sync application for Safe Settings
+          - name: Run application
+            run: npm run full-sync
+            working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
+            env:
+              GH_ORG: ${{ env.GITHUB_REPOSITORY_OWNER }}
+              APP_ID: ${{ vars.SAFE_SETTINGS_APP_ID }}
+              GITHUB_CLIENT_ID: ${{ vars.SAFE_SETTINGS_GITHUB_CLIENT_ID }}
+              GITHUB_CLIENT_SECRET: ${{ secrets.SAFE_SETTINGS_GITHUB_CLIENT_SECRET }}
+              PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
+              CONFIG_PATH: safe-settings
+              DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/safe-settings/config.yml
+              SETTINGS_FILE_PATH: organization.yml
+              LOG_LEVEL: trace
+        

@@ -74,7 +74,7 @@ rulesets:
         bypass_mode: pull_request
 
   # EOL Ruleset - Locks a branch and make the branch read-only
-  - name: Lock EOL Branch
+  - name: Lock EOL Branches
     target: branch
     enforcement: active
 
