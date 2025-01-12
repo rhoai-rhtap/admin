@@ -5,7 +5,9 @@ suborgrepos:
   - '*'
 
 rulesets:
+  #****************************************
   # Default Rulesets for release branches
+  #****************************************
   - name: Default
     target: branch
     enforcement: active
@@ -21,7 +23,10 @@ rulesets:
 
       - type: non_fast_forward
 
-  # Code Freeze Rulesets 
+
+  #**********************************
+  # Code Freeze Rulesets
+  #**********************************
   - name: Code Freeze
     target: branch
     enforcement: active
@@ -53,7 +58,7 @@ rulesets:
             - rebaseactive
 
       
-      # Enforces that only bypass_actors can merge PRs
+      # Restricts direct pushes and PR merges to the branch to bypass_actors only. If no bypass_actors are defined, the branch becomes read-only.
       #   bypass_actors with 'bypass_mode: pull_request' cannot push directly to the branch, but can merge PRs
       #   only bypass_actors with 'bypass_mode: always' are permitted to push directly to the branch and merge PRs
       - type: update
@@ -73,7 +78,10 @@ rulesets:
         actor_type: Team
         bypass_mode: pull_request
 
+
+  #**************************************************************
   # EOL Ruleset - Locks a branch and make the branch read-only
+  #**************************************************************
   - name: Lock EOL Branches
     target: branch
     enforcement: active
